@@ -1,0 +1,3 @@
+Model,Primary Objective,Input,Output,Multiple Objects,Localization,Epochs,Training Image Size,Training Batch Size
+YOLO11n,Object Detection,Full images,Bounding boxes + classes + confidence,Yes,Yes,20,640,8
+ResNet18,Image Classification,Object crops,Class + confidence,No (one crop per prediction),No,20,224,32

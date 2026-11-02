@@ -1,0 +1,57 @@
+# Keep source, documentation, dependency files, dataset YAML and text labels,
+# training settings, CSV/JSON results, and summary plots available on GitHub.
+# Avoid ignoring data/ or outputs/ wholesale: they contain useful context.
+
+# Local Python environments and generated caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+
+# Local credentials (example environment files may be committed)
+.env
+.env.*
+!.env.example
+!.env.sample
+.aws/
+*.pem
+*.key
+
+# Downloaded source images and generated classification crops.
+# Keep data/*.yaml and data/labels/**/*.txt for dataset interpretation.
+/data/images/
+/data/classification/
+*.cache
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Binary model checkpoints and exported models; retain training args/results.
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.safetensors
+*.tflite
+
+# Bulk per-image prediction renders; retain text predictions and summary plots.
+/outputs/yolo/test_predictions/*.jpg
+/outputs/yolo/test_predictions/*.jpeg
+/outputs/yolo/test_predictions/*.png
+
+# TensorBoard event streams and local runtime noise
+events.out.tfevents.*
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
